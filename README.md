@@ -70,26 +70,45 @@ Caso essa resposta ocorra é retornado a listagem de todos os games.
 
 Exemplo de Resposta
 ```
-[
-    {
-        "id": 23,
-        "title": "Call of duty MW",
-        "year": 2019,
-        "price": 60
-    },
-    {
-        "id": 65,
-        "title": "Sea of thieves",
-        "year": 2018,
-        "price": 40
-    },
-    {
-        "id": 2,
-        "title": "Minecraft",
-        "year": 2012,
-        "price": 20
-    }
-]
+{
+    "games": [
+        {
+            "id": 23,
+            "title": "Call of duty MW",
+            "year": 2019,
+            "price": 60
+        },
+        {
+            "id": 65,
+            "title": "Sea of thieves",
+            "year": 2018,
+            "price": 40
+        },
+        {
+            "id": 2,
+            "title": "Minecraft",
+            "year": 2012,
+            "price": 20
+        }
+    ],
+    "_links": [
+        {
+            "href": "http://localhost:45679/game/",
+            "method": "DELETE",
+            "rel": "delete_game"
+        },
+        {
+            "href": "http://localhost:45679/game/",
+            "method": "GET",
+            "rel": "get_game"
+        },
+        {
+            "href": "http://localhost:45679/auth",
+            "method": "POST",
+            "rel": "login"
+        }
+    ]
+}
 
 ```
 
@@ -117,11 +136,29 @@ Caso essa resposta ocorra é retornado os detalhe do game.
 
 Exemplo de Resposta
 ```
-{
-    "id": 65,
-    "title": "Sea of thieves",
-    "year": 2018,
-    "price": 40
+    "game": {
+        "id": 65,
+        "title": "Sea of thieves",
+        "year": 2018,
+        "price": 40
+    },
+    "_links": [
+        {
+            "href": "http://localhost:45679/game/65",
+            "method": "DELETE",
+            "rel": "delete_game"
+        },
+        {
+            "href": "http://localhost:45679/game/65",
+            "method": "PUT",
+            "rel": "edit_game"
+        },
+        {
+            "href": "http://localhost:45679/games",
+            "method": "GET",
+            "rel": "get_games"
+        }
+    ]
 }
 
 ```
