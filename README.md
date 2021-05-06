@@ -1,4 +1,4 @@
-# API em NodesJs
+# API em NodeJs
 Esta API é um exemplo de construção de APIs utilizando NodeJS
 ## Endpoints
 ### POST /auth
@@ -9,7 +9,7 @@ Responsável por realizar a autenticação do usuário para acesso a outras APIs
 
 Exemplo de Parâmetro
 ```
-{"email": "gilhhb@gmail.com","password":"nodesjs<3"}
+{"email": "gilhhb@gmail.com","password":"nodejs<3"}
 
 ```
 
